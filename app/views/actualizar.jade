@@ -1,0 +1,18 @@
+extends base
+block content
+
+	div.formulario
+		form(method="POST", action="/actualizar/"+person.id)
+			p Nombre :
+				input(type="text", required, placeholder="Escribe tu nombre", name="nombre", value=person.nombre)
+			p Apellido:
+				input(type="text", required, placeholder="Escribe tu apellido", name="apellido", value=person.apellido)
+			p Edad:
+				input(type="number", required, placeholder="Escribe tu edad", name="edad", value=person.edad)
+			p Ciudad:
+				input(type="text", required, placeholder="donde vives", name="ciudad", value=person.ciudad)
+			p Especialidad:
+				input(type="text", required, placeholder="Tu especialidad", name="especialidad", value=person.especialidad)
+
+			p
+				input(type="submit", value="enviar")

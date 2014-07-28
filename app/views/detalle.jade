@@ -1,0 +1,14 @@
+extends base
+block content
+	header
+		h1 Hola la informacion de #{person.nombre} es:
+
+	div.informacion
+		ul
+			li #{person.nombre}
+			li #{person.apellido}
+			li #{person.edad}
+			li #{person.ciudad}
+			li #{person.especialidad}
+
+	a(href="/", class="regresar") Regresar

@@ -1,0 +1,16 @@
+extends base
+block content
+	a(href="/crear", class="crear") Crea un nuevo personaje
+	table(border="0").personaje
+		tr.cabecera
+			th Nombre y Apellido
+			th Eliminar
+			th Actulizar
+		each persona in personas
+			tr.cuerpo
+				td 
+					a(href="/detalle/"+persona.nombre).nombre #{persona.nombre} #{persona.apellido}
+				td
+					a(href="/eliminar/"+persona.id).eliminar Eliminar 
+				td
+					a(href="/update/"+persona.nombre).update Actulizar
